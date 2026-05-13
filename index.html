@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЭкоДом — Экотовары для вашего дома</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ════════════════ NAV ════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#" onclick="showPage('home')">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <rect x="4" y="14" width="20" height="12" rx="3" fill="currentColor" opacity=".15"/>
+        <path d="M14 4 L26 14 H2 Z" fill="currentColor"/>
+        <rect x="10" y="16" width="8" height="10" rx="2" fill="currentColor"/>
+      </svg>
+      ЭкоДом
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('catalog')">Каталог</a></li>
+      <li><a href="#" onclick="scrollTo('#features')">Преимущества</a></li>
+      <li><a href="#" onclick="scrollTo('#faq')">ЧаВо</a></li>
+      <li><a href="#" onclick="scrollTo('#ecocalc')">Эко-калькулятор</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button title="Корзина">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </button>
+      <button title="Профиль">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════ HOME PAGE ════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Экотовары<br>для вашего дома</h1>
+      <p>Забота о близких, здоровье<br>и природе — в каждом продукте</p>
+      <a class="btn-primary" href="#" onclick="showPage('catalog'); return false;">Перейти в каталог</a>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-inner">🌿 </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="section" id="features">
+    <div class="section-title">Преимущества</div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌱 </div>
+        <h3>Эко-материалы</h3>
+        <p>Только натуральные компоненты</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">♻️ </div>
+        <h3>Многоразовые товары</h3>
+        <p>Снижение количества отходов</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏠</div>
+        <h3>Товары для дома</h3>
+        <p>Безопасно для всей семьи</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPULAR PRODUCTS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title" style="margin-bottom:0">Популярные товары</div>
+      <button class="btn-ghost" onclick="showPage('catalog')">Показать все</button>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img">🧴 </div>
+        <div class="product-info">
+          <div class="product-name">Эко-гель для стирки «FreshLeaf»</div>
+          <div class="product-footer">
+            <span class="product-price">450 ₽</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img">🧼 </div>
+        <div class="product-info">
+          <div class="product-name">Натуральное мыло «OrganicBar»</div>
+          <div class="product-footer">
+            <span class="product-price">320 ₽</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+12:27
+<div class="product-img">🪴 </div>
+        <div class="product-info">
+          <div class="product-name">Многоразовые губки из бамбука «BamboClean»</div>
+          <div class="product-footer">
+            <span class="product-price">180 ₽</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img">🧴 </div>
+        <div class="product-info">
+          <div class="product-name">Эко-гель для стирки «FreshLeaf»</div>
+          <div class="product-footer">
+            <span class="product-price">450 ₽</span>
+            <button class="btn-cart">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section" id="faq">
+    <div class="section-title">Часто задаваемые вопросы</div>
+    <div class="faq-list">
+      <div class="faq-item open" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          Экологичные товары действительно безопаснее обычных?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Да, в нашем ассортименте представлены товары с натуральным составом, без агрессивных химических компонентов (фосфатов, ПАВ и токсичных добавок). Они безопасны для здоровья, подходят для детей и не наносят вред окружающей среде.
+        </div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          Чем экотовары отличаются от обычной бытовой химии?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Экотовары производятся из натуральных и возобновляемых ресурсов. Они биоразлагаемы, не загрязняют воду и почву, упакованы в перерабатываемую или многоразовую упаковку.
+        </div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          Как оформить заказ на сайте?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Выберите товары, добавьте в корзину, оформите заказ, указав адрес доставки и удобный способ оплаты. Подтверждение придёт на email.
+        </div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          Есть ли доставка и сколько она занимает?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Да, доставляем по всей России. Срок доставки 2–7 рабочих дней в зависимости от региона. Бесплатная доставка при заказе от 1500 ₽.
+        </div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          Можно ли доверять эко-сертификатам на товарах?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          Мы работаем только с проверенными поставщиками, чья продукция имеет международные сертификаты: ECOCERT, COSMOS Organic, Nordic Swan. Сканы сертификатов доступны на странице каждого товара.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ECO-CALC BANNER -->
+  <div class="section" id="ecocalc">
+    <div class="eco-banner">
+      <div>
+        <h2>Эко-калькулятор</h2>
+        <p>Рассчитайте, сколько CO₂, пластика и воды вы сэкономите, если перейдёте на экологичный образ жизни. Настройте параметры — результат обновляется мгновенно.</p>
+        <button class="btn-white">Перейти в эко-калькулятор</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a class="logo" href="#" onclick="showPage('home')">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="color:var(--green)">
+          <rect x="4" y="14" width="20" height="12" rx="3" fill="currentColor" opacity=".15"/>
+          <path d="M14 4 L26 14 H2 Z" fill="currentColor"/>
+          <rect x="10" y="16" width="8" height="10" rx="2" fill="currentColor"/>
+        </svg>
+        ЭкоДом
+      </a>
+      <ul class="footer-links">
+12:27
+<li><a href="#" onclick="showPage('catalog')">Каталог</a></li>
+        <li><a href="#">Преимущества</a></li>
+        <li><a href="#">ЧаВо</a></li>
+        <li><a href="#">Эко-калькулятор</a></li>
+      </ul>
+      <div class="social-icons">
+        <button class="social-btn">Вк</button>
+        <button class="social-btn">О</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© ЭкоДом 2026</span>
+      <a href="#">Документация</a>
+    </div>
+  </footer>
+
+</div><!-- /page-home -->
+
+<!-- ════════════════ CATALOG PAGE ════════════════ -->
+<div class="page" id="page-catalog">
+
+  <div class="section">
+    <div class="breadcrumb">
+      <a href="#" onclick="showPage('home')">Главная</a>
+      <span>/</span>
+      <a href="#">Каталог товаров</a>
+      <span>/</span>
+      Все товары
+    </div>
+
+    <div class="catalog-header-row">
+      <div class="section-title" style="margin-bottom:0">Каталог товаров</div>
+      <div class="sort-btns">
+        <button class="sort-btn active" onclick="setSort(this)">Дешевле ↑</button>
+        <button class="sort-btn" onclick="setSort(this)">По популярности ↓</button>
+      </div>
+    </div>
+
+    <div class="catalog-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" placeholder="Поиск">
+    </div>
+
+    <div class="catalog-layout">
+      <!-- Sidebar -->
+      <div>
+        <div class="category-title">Категория</div>
+        <ul class="category-list">
+          <li class="category-item active" onclick="setCategory(this)">Все товары</li>
+          <li class="category-item" onclick="setCategory(this)">Уборка и химия</li>
+          <li class="category-item" onclick="setCategory(this)">Стирка и уход</li>
+          <li class="category-item" onclick="setCategory(this)">Посуда и кухня</li>
+          <li class="category-item" onclick="setCategory(this)">Zero Waste</li>
+          <li class="category-item" onclick="setCategory(this)">Гигиена и уход</li>
+          <li class="category-item" onclick="setCategory(this)">Ароматы и микроклимат</li>
+          <li class="category-item" onclick="setCategory(this)">Детям и семье</li>
+          <li class="category-item" onclick="setCategory(this)">Для животных</li>
+          <li class="category-item" onclick="setCategory(this)">Вода и фильтрация</li>
+          <li class="category-item" onclick="setCategory(this)">Наборы и подарки</li>
+        </ul>
+      </div>
+
+      <!-- Grid -->
+      <div class="catalog-grid">
+        <div class="catalog-product-card">
+          <div class="catalog-product-img">🧴 </div>
+          <div class="catalog-product-info">
+            <div class="catalog-product-name">Эко-гель для стирки «FreshLeaf»</div>
+            <div class="catalog-product-footer">
+              <span class="catalog-price">450 ₽</span>
+              <button class="btn-cart-big">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-product-card">
+          <div class="catalog-product-img">🧼 </div>
+          <div class="catalog-product-info">
+            <div class="catalog-product-name">Натуральное мыло «OrganicBar»</div>
+            <div class="catalog-product-footer">
+              <span class="catalog-price">320 ₽</span>
+              <button class="btn-cart-big">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-product-card">
+          <div class="catalog-product-img">🪴 </div>
+          <div class="catalog-product-info">
+            <div class="catalog-product-name">Многоразовые губки из бамбука «BamboClean»</div>
+            <div class="catalog-product-footer">
+              <span class="catalog-price">180 ₽</span>
+              <button class="btn-cart-big">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-product-card">
+12:27
+<div class="catalog-product-img">🧴 </div>
+          <div class="catalog-product-info">
+            <div class="catalog-product-name">Эко-гель для стирки «FreshLeaf»</div>
+            <div class="catalog-product-footer">
+              <span class="catalog-price">450 ₽</span>
+              <button class="btn-cart-big">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-product-card">
+          <div class="catalog-product-img">🎋 </div>
+          <div class="catalog-product-info">
+            <div class="catalog-product-name">Губки из бамбука «BamboClean»</div>
+            <div class="catalog-product-footer">
+              <span class="catalog-price">180 ₽</span>
+              <button class="btn-cart-big">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-product-card">
+          <div class="catalog-product-img">🧴 </div>
+          <div class="catalog-product-info">
+            <div class="catalog-product-name">Эко-гель для стирки «FreshLeaf»</div>
+            <div class="catalog-product-footer">
+              <span class="catalog-price">450 ₽</span>
+              <button class="btn-cart-big">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-product-card">
+          <div class="catalog-product-img">🧴 </div>
+          <div class="catalog-product-info">
+            <div class="catalog-product-name">Эко-гель для стирки «FreshLeaf»</div>
+            <div class="catalog-product-footer">
+              <span class="catalog-price">450 ₽</span>
+              <button class="btn-cart-big">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-product-card">
+          <div class="catalog-product-img">🧴 </div>
+          <div class="catalog-product-info">
+            <div class="catalog-product-name">Эко-гель для стирки «FreshLeaf»</div>
+            <div class="catalog-product-footer">
+              <span class="catalog-price">450 ₽</span>
+              <button class="btn-cart-big">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <a class="logo" href="#" onclick="showPage('home')">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="color:var(--green)">
+          <rect x="4" y="14" width="20" height="12" rx="3" fill="currentColor" opacity=".15"/>
+          <path d="M14 4 L26 14 H2 Z" fill="currentColor"/>
+          <rect x="10" y="16" width="8" height="10" rx="2" fill="currentColor"/>
+        </svg>
+        ЭкоДом
+      </a>
+      <ul class="footer-links">
+        <li><a href="#" onclick="showPage('catalog')">Каталог</a></li>
+        <li><a href="#">Преимущества</a></li>
+        <li><a href="#">ЧаВо</a></li>
+        <li><a href="#">Эко-калькулятор</a></li>
+      </ul>
+      <div class="social-icons">
+        <button class="social-btn">Вк</button>
+        <button class="social-btn">О</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© ЭкоДом 2026</span>
+      <a href="#">Документация</a>
+    </div>
+  </footer>
+
+</div><!-- /page-catalog -->
+
+<script>
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + name).classList.add('active');
+    window.scrollTo(0, 0);
+  }
+
+  function toggleFaq(el) {
+    const wasOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+    if (!wasOpen) el.classList.add('open');
+  }
+
+  function setSort(btn) {
+    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  function setCategory(el) {
+    document.querySelectorAll('.category-item').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+  }
+</script>
+</body>
+</html>
